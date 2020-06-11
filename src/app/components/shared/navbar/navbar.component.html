@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
+    <!-- Image and text -->
+    <a class="navbar-brand ml-5" [routerLink]="['/']">
+        <!-- <img src="/assets/img/banner-ico.jpg" width="40" height="40" class="d-inline-block align-top-center" alt="" loading="lazy"> --> <b> Rock Music</b>
+    </a>
+    <div class="input-group">
+  <input type="text" class="form-control" placeholder="Buscar Banda" aria-label="Buscar" (keyup)="searchBand(termino.value)" #termino>
+  <div class="input-group-append ml-2">
+    <button class="btn btn-secondary" type="button" (click)="openModal(modalAddbands)"><i class="fas fa-plus" title="Nueva Banda"></i></button>
+  </div>
+</div>
+</nav>
+
+<ng-template #modalAddbands let-modal>
+    <div class="modal-header">
+        
+        <h4 class="modal-title pull-left">
+          <i class="fa fa-music fa-1x"></i>
+          Agregar Banda de Rock
+        </h4>
+        <button class="close pull-right" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sed numquam facilis praesentium odio non dignissimos itaque quasi amet doloribus quaerat blanditiis veritatis, maiores excepturi inventore minus fugiat mollitia! Vel?</p>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+    </div>
+</ng-template>

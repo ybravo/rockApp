@@ -1,0 +1,183 @@
+/* You can add global styles to this file, and also import other style files */
+
+@media screen and (max-width: 480px) {
+    .contenido {
+        grid-template-columns: 1fr;
+        color: red;
+    }
+}
+
+body {
+    background-color: #e3e3e3;
+    /*color: white !important;*/
+}
+
+hr {
+    border-color: white;
+}
+
+h1 {
+    color: black;
+}
+
+.contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.puntero {
+    cursor: pointer;
+}
+
+.img-circle {
+    border-radius: 100%;
+    width: 250px;
+    height: 250px;
+}
+
+.card-title,
+.card-text {
+    color: black;
+}
+
+.card-img-top {
+    max-height: 150px;
+}
+
+button i {
+    font-size:  14px;
+}
+
+/* Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+    .card-img-top {
+        height: 11vw;
+    }
+}
+
+.badge {
+    margin-left: 5px;
+}
+
+.btn-outline-success {
+    margin-left: 5px;
+}
+
+.img-thumb {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    border-image: 5px;
+    border-color: blanchedalmond;
+}
+
+.btn-space {
+    margin-right: 10px;
+}
+
+
+/* Animaciones */
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fast {
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #f8f9fa;
+    margin-top: auto;
+    overflow: scroll;
+}
+
+.inputEstilo {
+    width: 100%;
+}
+
+.jumbotron {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-bottom: 0;
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron h1 {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: white;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+
+.title {
+    padding: 35px 25px;
+}
+
+.title h1 {
+    padding: 35px 10px;  
+}
+
+.title h6 {
+    color:  black;
+}
+
+section {
+    background-color: white;
+}
+
+.list {
+    margin-top: 35px;
+    background-color: white;
+}
+
+.table td, .table th {
+    color: black;
+}
+
+.alert-info {
+    margin-top: 15px;
+}

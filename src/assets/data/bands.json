@@ -1,0 +1,146 @@
+[
+    {
+        "id": 0,
+        "name": "The Rolling Stone",
+        "biography": "The Rolling Stones, es una banda británica de rock originaria de Londres. La banda se formó en abril de 1962​ por Brian Jones, Mick Jagger, Keith Richards, Bill Wyman, Charlie Watts e Ian Stewart.",
+        "image": "/assets/img/The_Rolling_Stones.jpg",
+        "officialsite": "https://www.ramones.com/",
+        "albums": [
+            {
+                "id": 1,
+                "title": "Some Girls",
+                "music": [
+                    {
+                        "url": "https://youtu.be/Uid7RrXBY2A"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Led Zeppelin",
+        "biography": "The Rolling Stones, es una banda británica de rock originaria de Londres. La banda se formó en abril de 1962​ por Brian Jones, Mick Jagger, Keith Richards, Bill Wyman, Charlie Watts e Ian Stewart.",
+        "image": "/assets/img/Led_Zeppelin.jpg",
+        "site": "https://rollingstones.com/",
+        "albums": [
+            {
+                "title": "Some Girls",
+                "image": "/assets/img/somegirls.jpg",
+                "music": [
+                    {
+                        "url": "https://youtu.be/Uid7RrXBY2A"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Queen",
+        "biography": "The Rolling Stones, es una banda británica de rock originaria de Londres. La banda se formó en abril de 1962​ por Brian Jones, Mick Jagger, Keith Richards, Bill Wyman, Charlie Watts e Ian Stewart.",
+        "image": "/assets/img/queen.jpg",
+        "site": "https://rollingstones.com/",
+        "albums": [
+            {
+                "title": "Some Girls",
+                "image": "/assets/img/somegirls.jpg",
+                "music": [
+                    {
+                        "url": "https://youtu.be/Uid7RrXBY2A"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Pin Floyd",
+        "biography": "The Rolling Stones, es una banda británica de rock originaria de Londres. La banda se formó en abril de 1962​ por Brian Jones, Mick Jagger, Keith Richards, Bill Wyman, Charlie Watts e Ian Stewart.",
+        "image": "/assets/img/Pink_Floyd1971.jpg",
+        "site": "https://rollingstones.com/",
+        "albums": [
+            {
+                "title": "Some Girls",
+                "image": "/assets/img/somegirls.jpg",
+                "music": [
+                    {
+                        "url": "https://youtu.be/Uid7RrXBY2A"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Deep Purple",
+        "biography": "The Rolling Stones, es una banda británica de rock originaria de Londres. La banda se formó en abril de 1962​ por Brian Jones, Mick Jagger, Keith Richards, Bill Wyman, Charlie Watts e Ian Stewart.",
+        "image": "/assets/img/deep-purple-2020.jpg",
+        "site": "https://rollingstones.com/",
+        "albums": [
+            {
+                "title": "Some Girls",
+                "image": "/assets/img/somegirls.jpg",
+                "music": [
+                    {
+                        "url": "https://youtu.be/Uid7RrXBY2A"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "AC/DC",
+        "biography": "The Rolling Stones, es una banda británica de rock originaria de Londres. La banda se formó en abril de 1962​ por Brian Jones, Mick Jagger, Keith Richards, Bill Wyman, Charlie Watts e Ian Stewart.",
+        "image": "/assets/img/Ac-dc.jpg",
+        "site": "https://rollingstones.com/",
+        "albums": [
+            {
+                "title": "Some Girls",
+                "image": "/assets/img/somegirls.jpg",
+                "music": [
+                    {
+                        "url": "https://youtu.be/Uid7RrXBY2A"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "The Ramones",
+        "biography": "The Rolling Stones, es una banda británica de rock originaria de Londres. La banda se formó en abril de 1962​ por Brian Jones, Mick Jagger, Keith Richards, Bill Wyman, Charlie Watts e Ian Stewart.",
+        "image": "/assets/img/The_Ramones.jpg",
+        "site": "https://rollingstones.com/",
+        "albums": [
+            {
+                "title": "Some Girls",
+                "image": "/assets/img/somegirls.jpg",
+                "music": [
+                    {
+                        "url": "https://youtu.be/Uid7RrXBY2A"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Kiss",
+        "biography": "The Rolling Stones, es una banda británica de rock originaria de Londres. La banda se formó en abril de 1962​ por Brian Jones, Mick Jagger, Keith Richards, Bill Wyman, Charlie Watts e Ian Stewart.",
+        "image": "/assets/img/Kiss.jpg",
+        "site": "https://rollingstones.com/",
+        "albums": [
+            {
+                "title": "Some Girls",
+                "image": "/assets/img/somegirls.jpg",
+                "music": [
+                    {
+                        "url": "https://youtu.be/Uid7RrXBY2A"
+                    }
+                ]
+            }
+        ]
+    }
+]
