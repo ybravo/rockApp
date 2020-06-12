@@ -2,6 +2,7 @@ import { Component, ViewChild, Output, EventEmitter } from '@angular/core';
 import { RockAppService } from 'src/app/services/rockApp.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Band } from 'src/app/band';
+import { BandModel } from '../../../assets/data/bandModel';
 declare var _dbBands: null;
 
 @Component({
@@ -11,6 +12,7 @@ declare var _dbBands: null;
 })
 
 export class HomeComponent {
+
   bands: Band[] = [];
   termino: string;
   bandSearch: any [];
@@ -46,6 +48,6 @@ export class HomeComponent {
    */
   deleteBand(band: Band): void{
     this.rockAppService.delete(band);
-    this.getBands();
+    // this.getBands();
   }
 }

@@ -4,15 +4,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Band } from '../../band';
 import { Observable, Subject } from 'rxjs';
 import {NgbModal, NgbModalConfig, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
-import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-bandsearch',
   templateUrl: './bandsearch.component.html',
-  styles: [`
-    .light-blue-backdrop {
-      background-color: #5cb3fd;
-    }`
+  styles: [
   ],
   providers: [NgbModalConfig, NgbModal]
 })
@@ -33,7 +30,7 @@ export class BandsearchComponent implements OnInit {
     public activeModal: NgbActiveModal
   )
   {}
-  
+
   /**
    * [ngOnInit description]
    */

@@ -17,7 +17,7 @@ export class BandlistComponent implements OnInit {
   constructor(
     private router: Router,
     private rockAppService: RockAppService
-  ) 
+  )
   {}
 
   ngOnInit(): void {}

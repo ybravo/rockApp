@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { FormsModule } from '@angular/forms';
 
 import { ROUTES } from './app.routes';
 
@@ -13,11 +14,9 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { DetailsComponent } from './components/details/details.component';
 import { BandlistComponent } from './components/bandlist/bandlist.component';
 import { BandsearchComponent } from './components/bandsearch/bandsearch.component';
-import { BandaddComponent } from './components/bandadd/bandadd.component';
+
 import {NgbModal, ModalDismissReasons, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
-
-
-import { InMemoryDataService } from './services/in-memory-data.service';
+import { DomseguroPipe } from './pipes/domseguro.pipe';
 
 
 @NgModule({
@@ -28,24 +27,22 @@ import { InMemoryDataService } from './services/in-memory-data.service';
     DetailsComponent,
     BandlistComponent,
     BandsearchComponent,
-    BandaddComponent
+    DomseguroPipe,
   ],
+
   imports: [
     BrowserModule,
     HttpClientModule,
     NgbModule,
+    FormsModule,
     RouterModule.forRoot(ROUTES),
-    HttpClientModule,
-// The HttpClientInMemoryWebApiModule module intercepts HTTP requests
-// and returns simulated server responses.
-// Remove it when a real server is ready to receive requests.
-    HttpClientInMemoryWebApiModule.forRoot(
-    InMemoryDataService, { dataEncapsulation: false }
-)],
+
+  ],
+
+
 
   providers: [
-    NgbActiveModal,
-    
+  NgbActiveModal,
 
   ],
   bootstrap: [AppComponent]

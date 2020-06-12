@@ -1,26 +1,22 @@
 <div class="album py-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4" *ngFor="let item of items">
-        <div class="card mb-4 shadow-sm">
-          <img [src]="item.Image" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h4 class="card-title text-center"> 
-              {{item.Name}} 
-            </h4>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-center align-items-center mt-4">
-              <div class="btn">
-                <button type="button" class="btn btn-sm btn-outline-secondary mr-2 mb-2" (click)="detailsBand(item.Id)">Ver Detalles</button>
-                <button class="btn btn-sm btn-danger btn-space mb-2" aria-hidden="true" title="Eliminar" (click)="deleteBand(item)"><i class="far fa-trash-alt"></i></button>
-              </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4" *ngFor="let item of items">
+                <div class="card mb-4 shadow-sm">
+                    <img src={{item.image}} class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">
+                            {{item.name}}
+                        </h4>
+                        <div class="d-flex justify-content-center align-items-center mt-4">
+                            <div class="btn">
+                                <button type="button" class="btn btn-sm btn-outline-secondary mr-2 mb-2" (click)="detailsBand(item.idb)">Ver Detalles</button>
+                                <button class="btn btn-sm btn-danger btn-space mb-2" aria-hidden="true" title="Eliminar" (click)="deleteBand(item)"><i class="far fa-trash-alt"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
-<!-- <button class="btn btn-sm btn-danger btn-space fa fa-trash" aria-hidden="true" title="Eliminar" (click)="deleteBand(item)"></button> -->
-

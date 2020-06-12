@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
-import { Bands } from '../data-band';
+import { Bands } from '../../assets/data/data-band';
 import { Band } from 'src/app/band';
 
 @Injectable({
@@ -41,7 +41,6 @@ export class RockAppService {
    */
   addBand( band: Band ) {
     return this.collectionBand.map((Band) => {
-      //band.Id = resp.name;
       return band;
     });
   }
@@ -58,9 +57,9 @@ export class RockAppService {
     term = term.toLowerCase();
 
     for (let band of this.collectionBand) {
-      let name = band.Name.toLowerCase();
+      let name = band.name.toLowerCase();
       if (name.indexOf(term) >= 0) {
-        searchArr.push(band)
+        searchArr.push(band);
       }
     }
     return searchArr;

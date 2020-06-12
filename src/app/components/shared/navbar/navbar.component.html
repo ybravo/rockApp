@@ -1,30 +1,109 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
     <!-- Image and text -->
     <a class="navbar-brand ml-5" [routerLink]="['/']">
-        <!-- <img src="/assets/img/banner-ico.jpg" width="40" height="40" class="d-inline-block align-top-center" alt="" loading="lazy"> --> <b> Rock Music</b>
+        <b>Rock Music</b>
     </a>
     <div class="input-group">
-  <input type="text" class="form-control" placeholder="Buscar Banda" aria-label="Buscar" (keyup)="searchBand(termino.value)" #termino>
-  <div class="input-group-append ml-2">
-    <button class="btn btn-secondary" type="button" (click)="openModal(modalAddbands)"><i class="fas fa-plus" title="Nueva Banda"></i></button>
-  </div>
-</div>
+        <input type="text" class="form-control" placeholder="Buscar Banda" aria-label="Buscar" (keyup)="searchBand(termino.value)" #termino>
+        <div class="input-group-append ml-2">
+            <button class="btn btn-secondary" type="button" (click)="openModal(modalAddbands)"><i class="fas fa-plus"
+                    title="Nueva Banda"></i></button>
+        </div>
+    </div>
 </nav>
+
+
+
+
 
 <ng-template #modalAddbands let-modal>
     <div class="modal-header">
-        
+
         <h4 class="modal-title pull-left">
-          <i class="fa fa-music fa-1x"></i>
-          Agregar Banda de Rock
+            <i class="fa fa-music fa-1x"></i> Agregar Banda de Rock
         </h4>
         <button class="close pull-right" aria-label="Close" (click)="modal.dismiss('Cross click')">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
     <div class="modal-body">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sed numquam facilis praesentium odio non dignissimos itaque quasi amet doloribus quaerat blanditiis veritatis, maiores excepturi inventore minus fugiat mollitia! Vel?</p>
+        <form autocomplete="off" (ngSubmit)="add(addBand)" #addBand="ngForm">
+            <div>
+                <div class="form-group row">
+                    <label class="col-2 col-form-label">Id</label>
+                    <div class="col-8">
 
+                        <input class="form-control" type="number" name="idb" [class.is-invalid]="name.invalid && name.touched" [ngModel]="band.idb" required minlength="5" #idb="ngModel">
+
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-2 col-form-label">Nombre</label>
+                    <div class="col-8">
+
+                        <input class="form-control" type="text" name="name" placeholder="Nombre" [class.is-invalid]="name.invalid && name.touched" [ngModel]="band.name" required minlength="5" #name="ngModel">
+                        <small *ngIf="name.invalid && name.touched" class="form-text text-danger">Ingrese 5
+                            letras</small>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-2 col-form-label">Biografía</label>
+                    <div class="col-8">
+                        <div class="form-group">
+                            <label for=""></label>
+                            <textarea class="form-control" name="biography" [class.is-invalid]="biography.invalid && biography.touched" [ngModel]="band.biography" rows="3" #biography="ngModel"></textarea>
+                            <small *ngIf="biography.invalid && biography.touched" class="form-text text-danger">Es
+                                obligatorio</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">Imagen</label>
+                <div class="col-8">
+                    <input class="form-control" type="url" name="image" placeholder="https://example.com" [class.is-invalid]="image.invalid && image.touched" [ngModel]="band.image" required #image="ngModel">
+
+                    <small *ngIf="albums.invalid && albums.touched" class="form-text text-danger">Es obligatorio</small>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">Sitio</label>
+                <div class="col-8">
+
+                    <input class="form-control" type="email" name="officialsite" placeholder="https://example.com" [class.is-invalid]="officialsite.invalid && officialsite.touched" [ngModel]="band.officialsite" required #officialsite="ngModel">
+
+                    <small *ngIf="officialsite.invalid && officialsite.touched" class="form-text text-danger">Es
+                        obligatorio</small>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">Album</label>
+                <div class="col-8">
+
+                    <input class="form-control" type="text" name="albums" placeholder="Album" [class.is-invalid]="albums.invalid && albums.touched" [ngModel]="band.albums" required #albums="ngModel">
+
+                    <small *ngIf="albums.invalid && albums.touched" class="form-text text-danger">Es obligatorio</small>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">Video</label>
+                <div class="col-8">
+
+                    <input class="form-control" type="url" name="music" placeholder="https://example.com" [class.is-invalid]="music.invalid && music.touched" [ngModel]="band.music" required #music="ngModel">
+
+                    <small *ngIf="albums.invalid && albums.touched" class="form-text text-danger">Es obligatorio</small>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-2 col-form-label">&nbsp;</label>
+                <div class="input-group col-md-8">
+                    <button type="submit" class="btn btn-outline-primary btn-block">
+                        Guardar
+                    </button>
+                </div>
+            </div>
+        </form>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>

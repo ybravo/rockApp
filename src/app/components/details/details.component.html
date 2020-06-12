@@ -1,17 +1,14 @@
 <section>
-    <div class="container">
+    <div class="container align-content-center">
         <div class="row title">
             <div class="col-sm-3 text-center">
-                <img src={{band.Image}} class="img-thumb" alt="...">
+                <img src={{band.image}} class="img-thumb" alt="...">
             </div>
-
             <div class="col-sm-9">
-                <h1>{{band.Name}}</h1>
-
-                <h6>{{band.Biography}}</h6>
-
+                <h1>{{band.name}}</h1>
+                <h6>{{band.biography}}</h6>
                 <p>
-                    <a href={{band.OfficialSite}} target="_blank">
+                    <a href={{band.officialsite}} target="_blank">
                         Ir a página del artista
                     </a>
                 </p>
@@ -21,50 +18,22 @@
 </section>
 
 
-        <div class="album py-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4" *ngFor="let album of band.Albums">
-        <div class="card mb-4 shadow-sm">
-          <img src={{album.Image}} alt="...">
-          <div class="card-body">
-            <h4 class="card-title text-center"> 
-              {{album.Title}}
-            </h4>
-            <p class="card-text">{{album.Summary}}</p>
-            <div class="d-flex justify-content-center align-items-center mt-4">
-              <div class="btn">
-              </div>
+<div class="album py-5">
+    <div class="container">
+        <div class="row m-5">
+            <div class="row-sm-3 text-center">
+                <div class="col text-center">
+                    <div class="card">
+                        <iframe [src]="band.music | domseguro" width="450" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-center align-items-center mt-4">
+                                <h4>{{band.albums}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
-<!-- <div class="container">
-    <div class="row list">
-        <table class="table">
-            <thead class="thead-dark">
-                <tr>
-                    <th></th>
-                    <th valign="middle">Album</th>
-                    <th valign="middle">Canción</th>
-                    <th valign="top">Vista Previa</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td></td>
-                    <td>{{band.Album.Title}}</td>
-
-                    <td>The best friend</td>
-                    <td>
-                        <iframe src="https://www.youtube.com/embed/CBY4vvDwMTA" width="200" height="150" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div> -->
